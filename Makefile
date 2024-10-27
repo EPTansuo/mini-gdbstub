@@ -23,12 +23,12 @@ TEST_BIN = $(OUT)/test.bin
 vpath %.c $(sort $(dir $(LIBSRCS)))
 .PHONY: all debug test clean
 
-all: CFLAGS += -O3
-all: LDFLAGS += -O3
+all: CFLAGS += -O1
+all: LDFLAGS += -O1
 all: $(LIBGDBSTUB)
 
-debug: CFLAGS += -O3 -g -DDEBUG
-debug: LDFLAGS += -O3
+debug: CFLAGS += -O1 -g -DDEBUG
+debug: LDFLAGS += -O1
 debug: $(LIBGDBSTUB)
 
 $(GIT_HOOKS):
